@@ -15,6 +15,7 @@ namespace DrugConsume.Entity.Concrete
         public int ExitAmount { get; set; }
         public int Amount { get; set; }
         public int Consume { get; set; }
+        public int DayLeft { get; set; }
         public int OcakTuketim { get; set; }
         public int SubatTuketim { get; set; }
         public int MartTuketim { get; set; }
@@ -27,5 +28,6 @@ namespace DrugConsume.Entity.Concrete
         public int EkimTuketim { get; set; }
         public int KasimTuketim { get; set; }
         public int AralikTuketim { get; set; }
+        public int TuketimHizi { get; set; }
     }
 }

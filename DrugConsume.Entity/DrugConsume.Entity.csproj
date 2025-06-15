@@ -44,6 +44,7 @@
     <Compile Include="Concrete\DataEntity.cs" />
     <Compile Include="Concrete\GenericDrug.cs" />
     <Compile Include="Concrete\GenericOfDrug.cs" />
+    <Compile Include="Concrete\Variables.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

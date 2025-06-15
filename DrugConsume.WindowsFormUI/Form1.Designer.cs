@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.veriÇekToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dosyaYükleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,7 +54,7 @@
             this.ayarlarToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1325, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1840, 24);
             this.menuStrip1.TabIndex = 17;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -67,7 +69,7 @@
             // dosyaYükleToolStripMenuItem
             // 
             this.dosyaYükleToolStripMenuItem.Name = "dosyaYükleToolStripMenuItem";
-            this.dosyaYükleToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.dosyaYükleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.dosyaYükleToolStripMenuItem.Text = "Dosya Yükle";
             this.dosyaYükleToolStripMenuItem.Click += new System.EventHandler(this.dosyaYükleToolStripMenuItem_Click);
             // 
@@ -131,29 +133,41 @@
             // 
             // dgwGeneric
             // 
+            this.dgwGeneric.AllowDrop = true;
             this.dgwGeneric.AllowUserToAddRows = false;
             this.dgwGeneric.AllowUserToDeleteRows = false;
             this.dgwGeneric.AllowUserToOrderColumns = true;
             this.dgwGeneric.AllowUserToResizeColumns = false;
             this.dgwGeneric.AllowUserToResizeRows = false;
             this.dgwGeneric.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(236)))), ((int)(((byte)(222)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgwGeneric.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgwGeneric.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgwGeneric.Location = new System.Drawing.Point(25, 61);
             this.dgwGeneric.Name = "dgwGeneric";
-            this.dgwGeneric.Size = new System.Drawing.Size(1300, 575);
+            this.dgwGeneric.Size = new System.Drawing.Size(1815, 853);
             this.dgwGeneric.TabIndex = 21;
             this.dgwGeneric.DataSourceChanged += new System.EventHandler(this.dgwGeneric_DataSourceChanged);
             this.dgwGeneric.ColumnHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgwGeneric_ColumnHeaderMouseDoubleClick);
+            this.dgwGeneric.DragDrop += new System.Windows.Forms.DragEventHandler(this.dgwGeneric_DragDrop);
+            this.dgwGeneric.DragEnter += new System.Windows.Forms.DragEventHandler(this.dgwGeneric_DragEnter);
             // 
             // tbxSearch
             // 
             this.tbxSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tbxSearch.Location = new System.Drawing.Point(558, 24);
+            this.tbxSearch.Location = new System.Drawing.Point(558, 17);
             this.tbxSearch.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tbxSearch.Name = "tbxSearch";
             this.tbxSearch.Size = new System.Drawing.Size(254, 31);
             this.tbxSearch.TabIndex = 22;
             this.tbxSearch.Texts = "Ara...";
+            this.tbxSearch._TextChanged += new System.EventHandler(this.tbxSearch__TextChanged);
             this.tbxSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbxSearch_KeyPress_1);
             // 
             // Form1
@@ -161,19 +175,21 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1293, 638);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.tbxSearch);
             this.Controls.Add(this.dgwGeneric);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbxYear);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.ShowIcon = false;
             this.Text = "İlaç Tüketim";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Activated += new System.EventHandler(this.Form1_Activated);
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwGeneric)).EndInit();

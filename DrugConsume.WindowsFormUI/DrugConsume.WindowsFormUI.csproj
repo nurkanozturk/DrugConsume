@@ -7,7 +7,7 @@
     <ProjectGuid>{9B14CE2F-B96D-4E05-A71A-59109E03C983}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>DrugConsume.WindowsFormUI</RootNamespace>
-    <AssemblyName>DrugConsume.WindowsFormUI</AssemblyName>
+    <AssemblyName>İlaç Tüketim</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -49,16 +49,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>CA6E380A063484A8BD860FE4DA498FB68CA26D5E</ManifestCertificateThumbprint>
-  </PropertyGroup>
-  <PropertyGroup>
-    <ManifestKeyFile>DrugConsume.WindowsFormUI_TemporaryKey.pfx</ManifestKeyFile>
-  </PropertyGroup>
-  <PropertyGroup>
-    <GenerateManifests>true</GenerateManifests>
-  </PropertyGroup>
-  <PropertyGroup>
-    <SignManifests>true</SignManifests>
+    <ApplicationIcon>medicine.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -130,7 +121,7 @@
     <EmbeddedResource Include="TextboxUC.resx">
       <DependentUpon>TextboxUC.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="DrugConsume.WindowsFormUI_TemporaryKey.pfx" />
+    <None Include="Properties\DataSources\DrugConsume.Entity.Concrete.Variables.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -165,6 +156,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="medicine.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
